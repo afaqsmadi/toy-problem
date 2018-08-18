@@ -12,5 +12,18 @@
 
 //Works for any number of input strings:
 var commonCharacters = function(string1, string2) {
+	var newarr=[]
+	var arr=[]
+	for(var i=0;i<string2.length;i++){
+		if(string1.includes(string2[i])){
+			newarr.push(string2[i])
+		}
+	}
+	for(var j=0;j<newarr.length;j++){
+		if(!arr.includes(newarr[j])){
+			arr.push(newarr[j])
+		}
+	}
+	return arr.join("")
   
 };

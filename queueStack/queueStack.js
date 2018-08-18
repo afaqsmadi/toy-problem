@@ -5,16 +5,20 @@
 
 var Stack = function() {
 	var storage = [];
-
-	this.push = function(){
+    
+	this.push = function(val){
+     storage.push(val)
 
 	};
 
 	this.pop = function(){
+		var d=storage.pop()
+		return d
 
 	};
 
 	this.size = function(){
+		return storage.length
 
 	};
 };
@@ -24,15 +28,19 @@ var Queue = function() {
 	var inbox = new Stack();
 	var outbox = new Stack();
 
-	this.enqueue = function(){
-
+	this.enqueue = function(val){
+		inbox.push(outbox.pop())
+        inbox.push(val)
+   
 	};
 
 	this.dequeue = function(){
+		outbox.push(inbox.pop())
+		return outbox.pop()
 		
 	};
 
 	this.size = function(){
-
+      return outbox.length
 	};
 };
