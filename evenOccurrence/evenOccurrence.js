@@ -10,7 +10,7 @@
 //output:"cat"
 
 
-
+//is done
 function evenOccurrence (arr) {
   var obj = {};
   for (var i = 0; i < arr.length; i++) {
